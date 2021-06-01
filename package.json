@@ -11,5 +11,13 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilsonv244/EventoMusica.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wilsonv244/EventoMusica/issues"
+  },
+  "homepage": "https://github.com/wilsonv244/EventoMusica#readme"
 }
