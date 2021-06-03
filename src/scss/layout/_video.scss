@@ -1,6 +1,6 @@
 .video{
     position: relative;
-    max-height: 70rem; 
+    max-height: 80rem;
     overflow: hidden;
     .overlay{
         position: absolute;
@@ -23,13 +23,12 @@
     display: flex;     
     align-items: center;
     height: 100%;
-   
-
     h2{
         display: flex;
         flex-direction: column;
         color: $blanco;
         align-items: flex-start;
+        font-size: 7rem;
         z-index: 1;
         span{
             font-size: 2rem,;
@@ -38,6 +37,4 @@
             font-weight: $gruesa;
         }
     }
-   
-
 }
