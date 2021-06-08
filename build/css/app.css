@@ -430,3 +430,41 @@ h3 {
       background-color: #f53756;
       padding: .8rem;
       font-weight: 700; }
+
+.line-up {
+  background: #f53756;
+  padding: calc( 5rem - 2rem) 0; }
+  .line-up h3, .line-up p {
+    color: white;
+    text-align: center;
+    margin: calc( 5rem - 2rem); }
+  .line-up li {
+    padding: 2.5rem 0 2.5rem 0; }
+  .line-up .liO {
+    background-color: #0E6B52; }
+
+.lineUpc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem; }
+  .lineUpc .nombre-escenario {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 500; }
+    .lineUpc .nombre-escenario:after {
+      content: '';
+      width: 10rem;
+      height: 10rem;
+      display: block;
+      margin: 2rem auto; }
+
+.EDM .nombre-escenario::after {
+  background-image: url("../../img/icono_rock.png");
+  width: 8rem;
+  height: 8rem; }
+
+.bg-amarillo {
+  background-color: #fef460; }
+
+.bg-verde {
+  background-color: #4cd8b3; }

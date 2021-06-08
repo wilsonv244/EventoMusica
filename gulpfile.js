@@ -6,15 +6,16 @@ const notify = require('gulp-notify');
 const webp = require('gulp-webp');
 //funciones//
 const paths = {
-    imagenes = 'src/img/**/*',
+    imagenes : 'src/img/**/*',
+    scss: 'src/scss/**/*.scss'
 }
 function css( ){
-    return src('src/scss/app.scss')
+    return src(paths.scss)
         .pipe( sass())
         .pipe( dest ('./build/css'))
 }
 function minificar( ){
-    return src('src/scss/app.scss')
+    return src(paths.scss)
         .pipe( sass({
             outputStyle: 'compressed'
         }))
@@ -28,9 +29,9 @@ function imagenes(){
 }
 function versionwebp(){
     return src(paths.imagenes)
-    .pipe(webp ( ))
-    .pipe(dest ('./build/img'))
-    .pipe( notify ({ message: 'version Weblista'}));
+        .pipe(webp () )
+        .pipe(dest ('./build/img'))
+        .pipe( notify ({ message: 'version Weblista'}));
 }
 function watcharchivos(){
     watch( 'src/scss/**/*.scss', css); //*= la carpeta actual **= todos los archivos
