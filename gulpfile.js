@@ -4,10 +4,12 @@ const sass = require('gulp-sass');
 const imagenmin = require('gulp-imagemin');
 const notify = require('gulp-notify');
 const webp = require('gulp-webp');
+const concat = require('gulp-concat');
 //funciones//
 const paths = {
     imagenes : 'src/img/**/*',
-    scss: 'src/scss/**/*.scss'
+    scss: 'src/scss/**/*.scss',
+    js: 'src/js/**/*.js'
 }
 function css( ){
     return src(paths.scss)
@@ -20,6 +22,11 @@ function minificar( ){
             outputStyle: 'compressed'
         }))
         .pipe( dest ('./build/css'))
+}
+function javascript(){
+    return src(paths.js)
+        .pipe( concat('bundle.js'))
+        .pipe(dest('./build/js'))
 }
 function imagenes(){
     return src(paths.imagenes)
@@ -35,6 +42,7 @@ function versionwebp(){
 }
 function watcharchivos(){
     watch( 'src/scss/**/*.scss', css); //*= la carpeta actual **= todos los archivos
+    watch(paths.js, javascript);
 }
 
 exports.css = css;
@@ -42,7 +50,7 @@ exports.minificar = minificar;
 exports.watcharchivos= watcharchivos;
 exports.imagenes = imagenes;
 exports.versionwebp = versionwebp;
-exports.default = series( css, imagenes, watcharchivos, versionwebp);
+exports.default = series( css, javascript, imagenes, watcharchivos, versionwebp);
 
 
 

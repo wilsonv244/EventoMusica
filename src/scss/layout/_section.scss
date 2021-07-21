@@ -9,7 +9,8 @@
     }
     
     li{
-        padding: 2.5rem 0 2.5rem 0;
+        padding: 2.5rem 0 2.5rem 2.5rem;
+        margin-left: 0;
     }
     .liO{
         background-color: $verdeO;
@@ -29,21 +30,38 @@
                 width: 10rem;
                 height: 10rem;
                 display: block;
-                
+                background-size: 15rem;
+                background-repeat: no-repeat;
                 margin: 2rem auto;
+                background-position: center;
             }
     }
    
 }
-.EDM .nombre-escenario{
-    &::after{
-        background-image: url('../../img/icono_rock.png');
-        width: 8rem;
-        height: 8rem;
+.rock .nombre-escenario{
+    &:after{
+        background-image: url(../img/icono_rock.png);
     }
 
 }
+.EDM  .nombre-escenario{
+    &:after{
+        background-image: url(../img/icono_edm.png);
+    }
+}
 
-
+.calendario{
+    padding-left: 0;
+    list-style: none;
+    span{
+        font-weight: $gruesa;
+    }
+}
+.bg-verde .calendario li:nth-child(odd){    
+    background-color: darken($verde, $amount: 10);
+}
+.bg-amarillo .calendario li:nth-child(odd){
+    background-color: darken($amarillo, $amount: 10);
+}
 
 

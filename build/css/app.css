@@ -439,7 +439,8 @@ h3 {
     text-align: center;
     margin: calc( 5rem - 2rem); }
   .line-up li {
-    padding: 2.5rem 0 2.5rem 0; }
+    padding: 2.5rem 0 2.5rem 2.5rem;
+    margin-left: 0; }
   .line-up .liO {
     background-color: #0E6B52; }
 
@@ -456,15 +457,57 @@ h3 {
       width: 10rem;
       height: 10rem;
       display: block;
-      margin: 2rem auto; }
+      background-size: 15rem;
+      background-repeat: no-repeat;
+      margin: 2rem auto;
+      background-position: center; }
 
-.EDM .nombre-escenario::after {
-  background-image: url("../../img/icono_rock.png");
-  width: 8rem;
-  height: 8rem; }
+.rock .nombre-escenario:after {
+  background-image: url(../img/icono_rock.png); }
+
+.EDM .nombre-escenario:after {
+  background-image: url(../img/icono_edm.png); }
+
+.calendario {
+  padding-left: 0;
+  list-style: none; }
+  .calendario span {
+    font-weight: 700; }
+
+.bg-verde .calendario li:nth-child(odd) {
+  background-color: #2bc69d; }
+
+.bg-amarillo .calendario li:nth-child(odd) {
+  background-color: #fef02d; }
 
 .bg-amarillo {
   background-color: #fef460; }
 
 .bg-verde {
+  background-color: #4cd8b3; }
+
+.picture h3 {
+  padding: calc( 5rem - 2rem);
+  text-align: center; }
+
+.picture li {
+  list-style: none; }
+
+.galeriaI {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: calc( 5rem - 2rem);
+  padding: calc( 5rem - 2rem); }
+  @media (min-width: 768px) {
+    .galeriaI {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: calc( 5rem - 2rem)/2; } }
+  @media (min-width: 1200px) {
+    .galeriaI {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      column-gap: calc( 5rem - 2rem); } }
+
+.boletos {
   background-color: #4cd8b3; }

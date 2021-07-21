@@ -1,0 +1,20 @@
+.picture{
+    h3{
+        padding: $separacion;
+        text-align: center;
+    }
+    li{
+        list-style: none;
+    }
+}
+.galeriaI{
+
+    @include grid(2, $separacion);
+    padding: $separacion;
+    @include tablet{
+        @include grid(4, $separacion/2);
+    }
+    @include desktop{
+        @include grid(6, $separacion);
+    }
+}
