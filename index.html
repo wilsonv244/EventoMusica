@@ -7,16 +7,18 @@
     
     <title>Una Puno Festival</title>
     <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-    <header class="header">
-        <div class="contenedor contenido-header">
+    <div class="elector" id="up"></div>
+    <header class="header" id="header">
+        <div class="contenedor contenido-header" >
             <h1>Una Puno Festival vicentenario PERU</h1>
             
             <nav class="navegacion">
-                <a href="#">Line Up</a>
-                <a href="#">Galeria</a>
-                <a href="#">Boletos</a>
+                <a href="#line-up">Line Up</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#boletos">Boletos</a>
             </nav>
         </div>
     </header>
@@ -42,7 +44,7 @@
             </div>
         </div>
     </div>
-    <section class="line-up">
+    <section class="line-up" id="line-up">
         <h3>Line Up</h3>
         <p class="dia">VIERNES 21 </p>
         <div class="contenedor lineUpc">
@@ -96,32 +98,48 @@
         </div>
 
     </section>
-    <section class="picture contenedor">
+    <section class="picture contenedor" id="galeria">
         <h3>Galeria</h3>        
         <ul class="galeriaI">
             
         </ul>
         
     </section>
-    <div class="boletos ">
-        <div class="contenedor">
-            <h3>Boletos</h3>
+    <div class="boletos" id="boletos">
+        <h3>Boletos</h3>
+        <div class="contenedor datos-boletos">
             <div class="pase1">
                 <h3>Pase 1 Dia</h3>
-                <div class="datos">
-                    <p>incluye</p>
-                    <p>acceso a todos los escenarios</p>
-                </div>
+                <ul class="informacion-boleto">
+                    <li class="rosa"><span>INCLUYE</span></li>
+                    <li> Acceso a todos los Escenarios</li>
+                    <li> Comida y Bebida</li>
+                    <li class="morado"><span>$100</span></li>
+                </ul>
             </div>
             <div class="pase2">
                 <h3>Pase 2 Dias</h3>
-                <div class="datos">
-                    
-                </div>
+                <ul class="informacion-boleto">
+                    <li class="rosa"><span>INCLUYE</span></li>
+                    <li> Acceso a todos los Escenarios</li>
+                    <li> Comida y Bebida</li>
+                    <li> Camisa del evento</li>
+                    <li> Acceso Vip</li>
+                    <li class="morado"><span>$180</span></li>
+                </ul>
             </div>
         </div>
         
     </div>
+    <div class="up">
+        <a class="fas fa-angle-up" id="scrool-up" href="#up"></a>
+    </div>
+
+    <footer>
+        <div class="derechos-reservados contenedor">
+            <p>Rock & EDM PUNO. Todos Los Derechos Reservado, Elaborado por el Barto ®</p>
+        </div>
+    </footer>
     <script src="build/js/bundle.js"></script>
 </body>
     

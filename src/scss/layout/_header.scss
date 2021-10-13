@@ -1,7 +1,6 @@
 .header{
     background-color: $verde;
     .contenido-header{
-
         padding: $separacion 0;
 
         @include tablet{
@@ -18,6 +17,12 @@
         @include tablet{
             margin: 0;
         }
+    }
+    &.header-static{
+        left: 0;
+        top: 0;
+        width: 100%;
+        position: fixed;
     }
 }
 .navegacion {

@@ -1,21 +1,2 @@
-console.log('estamos ready');
-document.addEventListener('DOMContentLoaded', function(){ ///espera que todo el archivo html este listo
-    crearimagen();
-});
-
-
-function crearimagen(){
-    const galeria = document.querySelector('.galeriaI');
-    
-    for(let i =1; i<= 12;i++){
-        const imagen = document.createElement('IMG');
-        imagen.src= `build/img/thumb/${i}.jpg`;
-
-        //MOSTRAR ELEMENTOS A LA WEB
-        const lista = document.createElement('LI');
-        
-        lista.appendChild(imagen);
-        galeria.appendChild(lista);
-
-    }
-}
+function scrolNav(){document.querySelectorAll(".navegacion a").forEach((function(e){e.addEventListener("click",(function(e){e.preventDefault();document.querySelector(e.target.attributes.href.value).scrollIntoView({behavior:"smooth"})}))}))}function headerStatic(){const e=document.querySelector("#header"),t=document.querySelector(".line-up"),o=document.querySelector("body"),c=document.querySelector(".up");window.addEventListener("scroll",(function(){console.log(t.getBoundingClientRect()),t.getBoundingClientRect().top<-8?(e.classList.add("header-static"),o.classList.add("scroll-body"),c.classList.add("ocultarBoton")):(e.classList.remove("header-static"),o.classList.remove("scroll-body"),c.classList.remove("ocultarBoton"))}))}function scrolUp(){document.querySelector("#scrool-up").addEventListener("click",(function(e){e.preventDefault(),console.log(e.target.attributes.href.value);document.querySelector(e.target.attributes.href.value).scrollIntoView({behavior:"smooth"})}))}function botonup(){const e=document.querySelector(".up"),t=document.querySelector(".anuncio");window.addEventListener("scroll",(function(){t.getBoundingClientRect().top<493?(console.log("estas ahi"),e.classList.add("ocultarBoton")):(console.log("te Pasaste hee..."),e.classList.remove("ocultarBoton"))}))}document.addEventListener("DOMContentLoaded",(function(){scrolUp(),headerStatic(),scrolNav()}));
+function crearimagen(){const e=document.querySelector(".galeriaI");for(let t=1;t<=12;t++){const n=document.createElement("IMG");n.src=`build/img/thumb/${t}.jpg`,n.dataset.imagenId=t,n.onclick=mostrarI;const c=document.createElement("LI");c.appendChild(n),e.appendChild(c)}}function mostrarI(e){const t=parseInt(e.target.dataset.imagenId),n=document.createElement("IMG");n.src=`build/img/grande/${t}.jpg`;const c=document.createElement("DIV");c.appendChild(n),c.classList.add("overlay");const d=document.createElement("P");d.textContent="X",d.classList.add("bt-cerrar"),c.appendChild(d),d.addEventListener("click",(function(){c.remove()})),c.addEventListener("click",(function(){c.remove()}));const a=document.querySelector("body");a.appendChild(c),a.classList.add("scroolbody")}document.addEventListener("DOMContentLoaded",(function(){crearimagen()}));

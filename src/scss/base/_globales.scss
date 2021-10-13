@@ -8,7 +8,14 @@ html{
 body{
     font-family: $fuentePrincipal;
     font-size: 1.6rem;
+    // &.scroolbody{
+    //     overflow: scroll;
+    // }
+    &.scroll-body{
+        padding-top: 10.6rem;
+    }
 }
+
 p{
     font-size: 2rem;
     color: $negro;
